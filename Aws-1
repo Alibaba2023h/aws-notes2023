@@ -113,5 +113,30 @@ CSP[AWS] Provides computing services / resources
 including; servers, network, storage, security, etc. 
 over the internet from their Datacenters    
 
+with CSP we can reduce cost by:
+  pay-as-you-go 
+  pay-as-you-grow  
+  pay-as-you-use  
+
+ AWS - Amazon Web Services   
+ GCP - Google Cloud platform) / 
+ AZURE Cloud
+
+Cloud Service Models:
+=====================
+IaaS -- Infrastructure as a service  :
+  - ec2 
+  - SonarQube
+  
+PaaS--  Platform  as a service  :
+  ECR / EKS / ECS /  
+
+IQ: Explain your experience in SaaS delivery??? 
+SaaS -- Software as a service:
+    CloudWatch 
+    SonarCloud 
+    NewRelic 
+    GitHub
+    DockerHub
 
 
