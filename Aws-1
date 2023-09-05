@@ -139,4 +139,15 @@ SaaS -- Software as a service:
     GitHub
     DockerHub
 
+Disaster recovery in AWS
+
+Region  = Logical names 
+Availability ZONES - AZs  = Physical locations comprising of 
+                            one or more ISOLATED Datacenters  
+
+  Region: us-east-1  = N-Virginia  
+          us-east-2  = Ohio  
+          us-west-1  = N. California
+          us-west-2  = Oregon 
+
 
