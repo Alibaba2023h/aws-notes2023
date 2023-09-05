@@ -3,7 +3,10 @@ What are cloud services?
 Overview
 Cloud services are infrastructure, platforms, or software that are hosted by third-party providers and made available to users through the internet. 
 
-Cloud services facilitate the flow of user data from front-end clients (e.g., users’ servers, tablets, desktops, laptops—anything on the users’ ends), through the internet, to the provider’s systems, and back. Cloud services promote the building of cloud-native applications and the flexibility of working in the cloud. Users can access cloud services with nothing more than a computer, operating system, and internet connectivity.
+Cloud services facilitate the flow of user data from front-end clients (e.g., users’ servers, tablets, desktops,
+laptops—anything on the users’ ends), through the internet, to the provider’s systems, and back. 
+Cloud services promote the building of cloud-native applications and the flexibility of working in the cloud. 
+Users can access cloud services with nothing more than a computer, operating system, and internet connectivity.
 Modernize your IT with managed cloud services
 
 
@@ -31,7 +34,8 @@ Once the data is stored in the cloud, it is easier to get back-up and restore th
 Cloud applications improve collaboration by allowing groups of people to quickly and easily share information in the cloud via shared storage.
 
 3) Excellent accessibility
-Cloud allows us to quickly and easily access store information anywhere, anytime in the whole world, using an internet connection. An internet cloud infrastructure increases organization productivity and efficiency by ensuring that our data is always accessible.
+Cloud allows us to quickly and easily access store information anywhere, anytime in the whole world,
+using an internet connection. An internet cloud infrastructure increases organization productivity and efficiency by ensuring that our data is always accessible.
 
 4) Low maintenance cost
 Cloud computing reduces both hardware and software maintenance costs for organizations.
@@ -46,11 +50,68 @@ Cloud computing offers Application Programming Interfaces (APIs) to the users fo
 Cloud offers us a huge amount of storing capacity for storing our important data such as documents, images, audio, video, etc. in one place.
 
 8) Data security
-Data security is one of the biggest advantages of cloud computing. Cloud offers many advanced features related to security and ensures that data is securely stored and handled.
+Data security is one of the biggest advantages of cloud computing.
+Cloud offers many advanced features related to security and ensures that data is securely stored and handled.
 
 
 
+Disadvantages of Cloud Computing?
 
+A list of the disadvantage of cloud computing is given below -
+
+1) Internet Connectivity
+As you know, in cloud computing, every data (image, audio, video, etc.) is stored on the cloud, 
+and we access these data through the cloud by using the internet connection. If you do not have good internet connectivity, you cannot access these data. 
+However, we have no any other way to access data from the cloud.
+
+2) Vendor lock-in
+Vendor lock-in is the biggest disadvantage of cloud computing. Organizations may face problems 
+when transferring their services from one vendor to another. As different vendors provide different platforms, 
+that can cause difficulty moving from one cloud to another.
+
+3) Limited Control
+As we know, cloud infrastructure is completely owned, managed, and monitored by the service provider, 
+so the cloud users have less control over the function and execution of services within a cloud infrastructure.
+
+4) Security
+Although cloud service providers implement the best security standards to store important information. But, 
+before adopting cloud technology, you should be aware that you will be sending all your organization's sensitive information to a third party,
+i.e., a cloud computing service provider.
+While sending the data on the cloud, there may be a chance that your organization's information is hacked by Hackers
+
+What to consider before creating/hosting resources in aws:
+What to consider before choosing a region in AWS:
+
+Availability: --- EC2/EKS/S3/ECS 
+   us-east-1   = 
+   af-west-1   =   eks  
+      South Africa   
+High Availability:  
+  1 application Server  :
+  8 application Servers :
+      1. Multiple instances of the servers -- 4
+      2. Deploy using Multi AZs  
+      3. Deploy using Multi Regions 
+      4. Multi-cloud -- AWS/GCP/AZURE
+
+Latency: -- TIME taken TO ACCESS A SERVER/application 
+   us-east-2 = Ohio   --- 400ms to access  
+   us-west-2 = Oregon --- 100ms to access 
+Complaince / Regulations []:
+   Mumbai  = 25$/hr 
+   Ohio    = 125$/hr   
+customer Location
+   Ohio  
+   London    
+Security:
+  Mosco /   
+
+Price  
+  
+Cloud Service Providers - CSP = AWS / GCP / AZURE 
+CSP[AWS] Provides computing services / resources 
+including; servers, network, storage, security, etc. 
+over the internet from their Datacenters    
 
 
 
