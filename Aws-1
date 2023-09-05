@@ -211,3 +211,20 @@ SPot
 3-Charged by hour
 4-Spot price fluctuate based on supply and demand in the market
   spot instances - Bids 
+
+ommunity AMIs: comprises mostly of the OS only    
+Marketplace AMIs: comprises of the OS and other Licence Softwares 
+   splunk -- Amazon Linux 2 + splunk Softwares    
+   openvpn --- Ubuntu 22.04.1 LTS + 
+               Ubuntu 18 LTS
+
+10GB/S   = 10,000MB/S  
+
+Public  IP v4 address: 3.92.181.134  / 44.211.253.29
+  This is dynamic  
+
+Private IP v4 address: 172.31.94.207
+  This is static 
+
+3.92.181.134
+172.31.94.207
