@@ -178,3 +178,14 @@ Security:
   Mosco /   
 
 Price  
+
+EC2-Basics
+==========
+                          EC2---:
+  Basic Computer vs      aws-EC2 
+  OS     ----            AMI (OS + Additional Softwares) 
+  Hard Drive             EBS (Elastic Block Store)\
+  RAM                    RAM
+  CPUs[1, 2, 16 core]    Instance type[t2.mirco, t2.medium]
+  Network CARD           IP Addressing 
+  Firewall               Security Groups
