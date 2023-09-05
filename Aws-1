@@ -189,3 +189,25 @@ EC2-Basics
   CPUs[1, 2, 16 core]    Instance type[t2.mirco, t2.medium]
   Network CARD           IP Addressing 
   Firewall               Security Groups
+
+AMI = amazon machine image 
+
+EC2 Instance Purchasing Options:
+  on-demand instances
+
+1-Most expensive purchasing option
+2-Most flexibility purchasing option
+3-You are charged only when the instance is running(billed by hour)
+4-You can provision/terminate an instance anytime
+
+  Reserved instances
+1-Allows us to purchase an instance for a set time period(1/3yrs)
+2-Significant discount
+3-Once you buy a reserved instance,we are responsible for the entire price-regardless oh how often we use it
+
+SPot
+1-Amazon sells the unused instance.for short amount of time at lower price 
+2-we can bid on an instance type and only use when the spot price is equal to or below your bid price
+3-Charged by hour
+4-Spot price fluctuate based on supply and demand in the market
+  spot instances - Bids 
