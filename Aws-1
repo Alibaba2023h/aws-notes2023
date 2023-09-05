@@ -150,4 +150,31 @@ Availability ZONES - AZs  = Physical locations comprising of
           us-west-1  = N. California
           us-west-2  = Oregon 
 
+What to consider before creating/hosting resources in aws:
+What to consider before choosing a region in AWS:
 
+Availability: --- EC2/EKS/S3/ECS 
+   us-east-1   = 
+   af-west-1   =   eks  
+      South Africa   
+High Availability:  
+  1 application Server  :
+  8 application Servers :
+      1. Multiple instances of the servers -- 4
+      2. Deploy using Multi AZs  
+      3. Deploy using Multi Regions 
+      4. Multi-cloud -- AWS/GCP/AZURE
+
+Latency: -- TIME taken TO ACCESS A SERVER/application 
+   us-east-2 = Ohio   --- 400ms to access  
+   us-west-2 = Oregon --- 100ms to access 
+Complaince / Regulations []:
+   Mumbai  = 25$/hr 
+   Ohio    = 125$/hr   
+customer Location
+   Ohio  
+   London    
+Security:
+  Mosco /   
+
+Price  
