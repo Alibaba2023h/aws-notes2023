@@ -93,3 +93,9 @@ will show as you
 
 Volume expansion - vertical   [4gb-->7gb] Vertical volume is when you increase your volume by space
 Volume expansion - horizontal [v1=8g, v2=7g, v3=6g]  horizontal is whenn you create different storage and attach to your server
+
+You can increase your EBS volume VERTICALLY by adding the GB.
+click on volume
+click on modify volume
+SIZE-increase from maybe 4 to 8gb this is know as vertical expansion
+A single server can have multiple EBS Volumes
