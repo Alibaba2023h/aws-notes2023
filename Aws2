@@ -68,6 +68,28 @@ Choose your availability Zone
 TAG
 KEY-Name value -Myvol
 select Create
+Now attach volume to your instance(when that is done you will see a volume state saying in use)
 
+lsblk will show the mounted volumes
+you will see the additioinal disk added
 
+FORMAT AND MOUNT AN ATTACHED VOLUME
 
+sudo file -s /dev/xvdf
+This command will check if we have file sysytems
+sudo mkfs -t xfs /dev/xvdf
+this command will create a file system
+sudo mkdir /data
+this will create a mount point
+ls /data 
+you can see our mount point
+df -h
+check if your volume is mounted
+sudo mount /dev/xvdf /data
+this resource is mounted on /data
+now do lsblk you will notice its mounted on /data
+df -h
+will show as you
+
+Volume expansion - vertical   [4gb-->7gb] Vertical volume is when you increase your volume by space
+Volume expansion - horizontal [v1=8g, v2=7g, v3=6g]  horizontal is whenn you create different storage and attach to your server
