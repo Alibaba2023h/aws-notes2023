@@ -1,7 +1,21 @@
 AWS STORAGE SERVICE
+STORAGE OPTIONS INCLUDE
+EBS
+S3
+EFS
+SNOW BALL
+STORAGE GATEWAY
+
+
 STOARGE TYPES IN AWS
 Block-Level(Basically binaries and software's can't modify or delete.)
 EBS (Elastic Block Storage)-It requires mounting
+A block storage (so you need to format it).This means you are able to choose which type of file system you want
+It is really Fast
+It is relatively cheap
+With the new announcement From Amazon,You can store up to 16tb data per storage on SSD
+You can snapshot an EBS (while it is still running) for backup reasons
+You need an ec2 instance to attach it to
 An Ebs volume cannot not be attached to more than one server.
 Take an example of a labtop.Can a hard dive be mounted to two computers at a time?The answer is NO
 Instance Stored Volumes
@@ -43,4 +57,17 @@ So its simple to connect your hard drive to your laptop the must be in the same 
 
 So for Ebs Volume to connect with with your server the must be in same availability Zone.
 e.g your server in us-east-1 and your Ebs volume must be in us-east-1 as well.
+ PROCEDURES TO CREATE A VOLUME ON AWS
+SELECT ON ELASTIC BLOCK STORAGE
+CHOOSE VOLUME
+CHOOSE CREATE VOLUME
+VOLUME-TYPE-General purpose SSD(gp3)
+SIze -CHoose any G example 6GB
+Availability ZONE
+Choose your availability Zone
+TAG
+KEY-Name value -Myvol
+select Create
+
+
 
