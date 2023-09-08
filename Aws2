@@ -1,1 +1,46 @@
+AWS STORAGE SERVICE
+STOARGE TYPES IN AWS
+Block-Level(Basically binaries and software's can't modify or delete.)
+EBS (Elastic Block Storage)-It requires mounting
+An Ebs volume cannot not be attached to more than one server.
+Take an example of a labtop.Can a hard dive be mounted to two computers at a time?The answer is NO
+Instance Stored Volumes
+
+Object Level (Users/application related files ex.doc,images,pdf)
+
+S3
+
+For data to be stored in a server,we need a storage solution
+We can mount a storage such as EBS to our server
+
+How do you create and place resources in AWS:
+    ec2 instances[webservers, dbServers, appServers]
+    s3,
+    efs  
+    Load Balancers
+
+meta data:This are datas about your instance.
+Webserver = 
+  Instance-id
+  publicIP    
+
+  /dev/xvda this is where a volume is mounted in a server
+
+
+df -h
+This shows the volume mounted on  your server
+here you can see the percentage been used in your work
+
+lsblk 
+We can expand our volume with EBS(elastic block storage)
+
+HOW TO ATTACH EBS VOLUME TO YOUR SERVER
+1-make sure they are same availability zone
+Take an example of a hard drive which is out of your home and your laptop in your home.
+Will you be able to attach that hard drive to your laptop meanwhile the are not in the same locations?
+the answer is NO
+So its simple to connect your hard drive to your laptop the must be in the same place closer right.
+
+So for Ebs Volume to connect with with your server the must be in same availability Zone.
+e.g your server in us-east-1 and your Ebs volume must be in us-east-1 as well.
 
