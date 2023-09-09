@@ -99,3 +99,17 @@ click on volume
 click on modify volume
 SIZE-increase from maybe 4 to 8gb this is know as vertical expansion
 A single server can have multiple EBS Volumes
+
+ IQ: How many Security Groups can be assigned to an Instance --- 10   
+      sg1_ssh
+      sg2_http  
+
+IQ: What is metadata?
+    data about data or a resource like an ec2 instance  
+  NameTag: dbserver
+  Instance ID: i-099df0d353b680430
+  Public IP: 44.202.44.204 
+  Private IP: 172.31.86.122  
+  SG: sg-0e1b7c69687061423
+  vpc-0d18876c8fdcc647f
+  Root device name: /dev/sda1
