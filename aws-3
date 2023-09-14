@@ -55,4 +55,35 @@ to create a snapshot
 How to create a volume from snapshot
 just clcik on the snapshot 
 click on action
-create image from snapshot
+create volume from snapshot
+you can chnage the availability  zone
+when you do this,you will notice that data found in your region can be found in another region
+Take note you need to have enable cross region while creating the snapshot life cycle policy.
+
+From a snapshot we can creAte images and volumes
+Take an example you create a snapshot of your jenkins server and with the snapshot you create 
+an image of that jenkins server which will include all of the stuffs found on your jenkins server right.
+Example content of the jenkins will include OS/SOFTWARES/APPS AND EVERYTHING PART OF THE DOCKER
+
+HOW TO CREATRE AN IMAGE FROM SNAPSHOT
+select the snapshot and choose create image from snapshot
+choose image name
+add description
+click create image
+when its created you will notice that the image is available
+
+YOU CAN USE THIS IMAGE TO CREATE AND INSTANCE
+WHEN CREATING A SERVER YOU CAN USE MY-IMAGE
+
+SO click on lunch instance
+select instance name
+select image and choose MYAMI
+AND SELECT IT
+This server will be created using your image
+
+SOME FEW BENEFITS OF EBS VOLUME
+Reliability  and secure storage
+Secure
+high performance
+easy data backup
+
