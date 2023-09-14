@@ -20,6 +20,7 @@ click create snapshot
 add a description e.g jenkins backup
 add a tag NAME Value-sp-jenkins
 
+
 So if you go to snapshot you will notice it has been created 
 these snapshot is storted in and s3 bucket
 
@@ -86,4 +87,23 @@ Reliability  and secure storage
 Secure
 high performance
 easy data backup
+====================================================
+EFS this stands for elastic file storage
+Efs can be mounted on multiple instance
+it is a network file system
+Amazon Elastic file system (EFS) provides a simple scalable elastic file system for general
+purpose workloads for use with aws cloud services and on-premises resources
+Create Efs 
+you can select default vpc or existing vpc
+
+With efs data stored can synchronize in all the servers 
+HOW TO ATTACH EFS 
+Click on the efs created and select attach
+now we can attach using NFS
+make sure nfs port is open in the account your trying to mount the nfs
+do same under security group of efs and allow all tcp ports open
+Make sure nfs is installed in your system
+Sudo yum install nfs-utils
+sudo mkdir efs 
+then copy the command on efs and tun on your cli
 
