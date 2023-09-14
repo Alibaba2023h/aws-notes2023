@@ -1,1 +1,58 @@
+What is SNAPSHOT IN AWS?
+A snapshot is a base feature for creating backups of your EBS volume.A snapshot takes a copy of the ebs volume and places
+it in Amazon S3 Where its stored redundantly in multiple Availability Zones.
+Snapshot policy
+Meaning you can program your system to do snapshot every 6am daily
+these can be program according to your ticket given by your company
+So you can use a snapshot life cycle policy
 
+HOW TO CREATE A SNAPSHOT ON AWS
+
+Click on the volume your working on
+clcik on action and select create snapshot
+
+also you can click on your EC2-instances that has a vloume
+check the name and go back to volumes
+and then you can create a snapshot from that volume
+so e.g your jenkins server your click on the volume 
+click action 
+click create snapshot 
+add a description e.g jenkins backup
+add a tag NAME Value-sp-jenkins
+
+So if you go to snapshot you will notice it has been created 
+these snapshot is storted in and s3 bucket
+
+ALso take note that for disaster recovery you should create your snapshot in different regions
+e.g you create your snapshot in us-east-1b and another in us-west-2
+Take note that you cannot use one ebs volume in two regions
+but you can create a snapshot from that volume and use it to create and EBS Volume in another region
+Those that makes sense now? YES
+USING A SNAPSHOT TO CREATE A VOLUME IN ANOTHER REGION
+
+HOW TO CREATE SNAPSHOT LIFECYCLE POLICY
+go to volume
+select the volume and click on create snapshot lifecycle policy
+Target resource types-Volume
+target resource tags
+NAME 
+SHedule details
+choose schedule name
+choose frequency e.g Daily
+EVERY e.g 12 hours
+Starting at e.g 9:00
+Retention type e.g Count
+Keep e.g 3
+
+You can also enable Cross-Region copy to copy snapshots created by this 
+schedule to up to three additional Regions
+You can also enable cross-accountsharing to share the snapshots created by this schedule with other aws accounts
+
+Now click on create
+These process will Automatically create a snapshot for us.SO the automatic method is preferable than the manual process
+to create a snapshot
+
+How to create a volume from snapshot
+just clcik on the snapshot 
+click on action
+create image from snapshot
