@@ -108,7 +108,12 @@ Permissions:
 
 Policies:
   versioning   
-  replication 
+  replication - You can replicate the object in a bucket in another bucket (the can be in the same region)
+clcik on your bucket and choose versions
+enable bucket versioning
+
+you can also create another bucket and enable versioning while creating it
+
      class32test/class33.jpg  
      class32b/class33.jpg [The same/different region]         
 
