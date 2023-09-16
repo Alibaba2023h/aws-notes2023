@@ -1,1 +1,134 @@
+S3 buckets
+====================
+What is S3 bucket?
+An Amazon S3 bucket is a public cloud storage resource available in Amazon Web Services (AWS) Simple Storage Service (S3) platform.
+It provides object-based storage, 
+where data is stored inside S3 buckets in distinct units called objects instead of files.
+SOME ADVANTAGES OF S3 BUCKETS
+================================
+-You can store files and folders but can't have locks,Permissions etc like you
+would with a traditional file system
+-This means by default yo can't just mount s3 and use it as your webserver
+-But its perfect for storing your images and videos for your website
+-great for short term achiving (e.g a few week). Its good for long term
+archiving too but Glacier is more cost efficient
+-Great for storing logs
+-You can access the data from every region (extra costs may apply)
+-Highly Available Redundant.Basically data loss is not possible
+-Much cheaper than EBS
+-You can serve the content directly to the internet.you can even have a full static
+website working direct from s3 without an Ecs instance
+Take note that aws provide us services
+
+AWS Services classification:
+==============================
+  security  
+  compute = 
+     server - ec2 instances  
+     serverless - Lambda / Beanstack / farget profile  this are servers but serverless
+A serverless architecture is a way to build and run applications and services without having to manage infrastructure.
+Your application still runs on servers, but all the server management is done by AWS
+  Containers:
+     ECS/ Amazon Elastic Container Service
+     EKS/ Amazon Elastic Kubernetes Service 
+
+  databases 
+  networking 
+  data anylytics 
+
+  storage  solutions:
+    - Elastic Block Store          = block storage   
+    - Elastic File system EFS / NFS= file storage This are network system managed by aws
+You managed the nfs server and can be attached to many servers
+If the server goes down there will be problems
+All datas in your servers synchronize with the other server
+our efs is hight scalable meaning the more you use it increase.It increase vertically
+    - nfs port = 2049  
+
+  ebs and efs required mounting  
+Hands on:
+
+  https://class32test.s3.amazonaws.com/class33.jpg
+
+Ticket001
+ 1. create an s3 bucket and add objects without public access 
+ 2. create an s3 bucket with public access and add objects    
+
+<Error>
+<Code>AccessDenied</Code>
+<Message>Access Denied</Message>
+<RequestId>W7B9W3AKJPTZED85</RequestId>
+<HostId>uMAUebeGfzt3SDQ0X4em6EkxJIKGJEvMNNGSwYb3S3mLgBPGbpP+yFAC0ak11RWtyllhVtiDe7g=</HostId>
+</Error>
+
+Ticket002
+ 1. enable public access on the objects in your s3 bucket   
+
+HOW TO CREATE S3 BUCKET
+==========================
+
+Go to aws 
+select services
+choose s3 bucket
+select the bucket name
+choose region
+ACLs enabled
+create
+when this bucket is created
+you can add any stuff in the s3 bucket from your system
+That object wll have an object url
+
+CREATE AND S3 BUCKET WITHOUT PUBLIC ACCESS
+============================================
+Follow the same stage we created the bucket above
+under Block all public access
+tick it so users can access it
+
+CREATE AND S3 BUCKET WITH PUBLIC ACCESS  (if your creating s3 for a company with sensitive files then dont enable public access)
+===========================================
+
+Take note that you can assign permision to your s3 buckets
+Grant read access to user in the internet or users
+
+on your bucket you can change permission
+object actions
+you cam make a bucket public or private
+
+Permissions in s3 are managed/granted using:
+    1. Access Control List ACLs  
+    2. Permissions [ALLOW PUBLIC]  
+
+  S3 bucket = class32test   
+     object in the s3 bucket = class33.jpg   
+
+
+Permissions:
+  Private access  
+  public access [read/write]  
+
+Policies:
+  versioning   
+  replication 
+     class32test/class33.jpg  
+     class32b/class33.jpg [The same/different region]         
+
+Destination bucket:
+ s3 bucket URL =   s3://class32b  
+
+source bucket:
+  s3://class32a  
+
+Life Cycles Policies:
+s3 storage classes: 
+   Standard - frequent Access    = 0.5$/G/month  300
+   IA (Infrequent Access)        = 0.3$/G/month  350  
+   RRS                           = 0.2$/G/month  400 
+   Glacier                       = 0.1$/G/month  500   
+   deep Glacier [ 15 years   ]
+
+s3 is a paid solution.
+  Netflix  = Black Panter 1  -- 12 months    
+
+
+
 
