@@ -6,6 +6,22 @@ or physical datacenters required.
 You can define your own network space, and control how your network and the Amazon 
 EC2 resources inside your network are exposed to the Internet
 
+VPC (Vrtual Private Cloud)
+-Vpc is a private sub-section of AWS that you control,in which place AWS resources.
+-You have full control over who has access to the AWS resources you place inside our VPC
+-VPC lets you provision a logically isolated section of the AWS cloud where you launch AWS resources in a Virtual network
+-In the VPC we can control our vitual networking environment,IP address,creation of subnets,route tables & gateways
+-When we create an AWS account a default VPC is created for you.
+
+
+WHATS IN THE VPC TOOL BOX?
+
+VPC-User-defined address space up to /16 (65.536)
+Subnets -200 User-defined  up to /16
+Route Tables-Define how traffic should be routed from to each subnet
+Acess Control Lists - Stateless networkfiltering between subnet
+Internet Gateway -A logical device enabling traffic to be routed to from the public internet
+NAT-Provide Network Address Translation to private instance for 10Gbps traffic
 
 
   vpc: virtual private network  
