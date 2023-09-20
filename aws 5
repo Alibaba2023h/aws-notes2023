@@ -1,0 +1,77 @@
+VPC
+=========
+Whats aws vpc?
+Amazon VPC enables you to build a virtual network in the AWS cloud - no VPNs, hardware,
+or physical datacenters required. 
+You can define your own network space, and control how your network and the Amazon 
+EC2 resources inside your network are exposed to the Internet
+
+
+
+  vpc: virtual private network  
+      cidr block    ip-addresses   
+      10.0.0.0/16  =  65,536    
+      172.0.0.0/24 =  256
+      172.0.0.0/25 =  128
+      172.0.0.0/26 =  64
+      192.0.0.0/28 =   16
+      192.0.0.0/32 =   1
+      10.0.0.0/n where n is the subnet prefix [16, 17, 18,---32] 
+      no of addresses = 2^(32-n) 
+         n=16, = 2^32-16 =2^16 = 65,536
+         n=24, = 2^32-24 = 2^8 =  256 
+         n=28, = 2^32-28 = 2^4 =  16  
+         n=32, = 2^32-32 = 2^0 =  1 
+[140 ip addresses]
+  vpc_tesla_dev 
+     10.0.0.0/24  = 256 addresses 
+    subnets:
+       publicSN1 
+         10.0.0.0/25 = 128 addresses 
+           10.0.0.0, 10.0.0.1, 10.0.0.2, ... 10.0.0.127
+       PrivateSN1
+         10.0.0.128/25 = 128 addresses
+         [10.0.0.128, 10.0.0.129, ..., 10.0.0.255]
+
+AWS ACCOUNT:
+Global resources    
+Regional  resources
+  vpcs---
+     aws default vpc 
+       ec2 instances [jumpserver, appServer]
+     aws custom vpcs [secured and gives users more controls]  
+        ec2 instances [jumpserver, appServer]    
+
+AZ resources
+  subnets  
+
+   [0,1,2,3] = 4
+
+  jumpserver = publicSN 192.0.0.0/25 
+    192.0.0.24 
+    52.91.72.142 
+    ssh -i "dominion.pem" ec2-user@52.91.72.142
+  webServer = = publicSN 192.0.0.0/25 
+    192.0.0.10
+    
+    ssh -i "dominion.pem" ec2-user@54.84.126.250
+  
+  DBSERVER = privateSN, 192.0.0.128/25   
+    192.0.0.186
+    ssh -i "dominion.pem" ec2-user@192.0.0.186
+
+
+Dominion Systems  
+Oct 2021 to May 2022  
+DevOps Engineer
+
+Load Balancers/webservers:
+  nginx  
+  haProxy 
+  http
+  users ----> ELB/LB ---->appServers
+
+    ssh simon@3.138.178.87    
+    http://3.138.178.87:80
+
+
