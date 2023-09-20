@@ -19,7 +19,11 @@ VPC (Vrtual Private Cloud)
 -In the VPC we can control our vitual networking environment,IP address,creation of subnets,route tables & gateways
 -When we create an AWS account a default VPC is created for you.
 
+Your VPC has an implicit router,and you use route tables to control where network traffic is directed.
+Each subnet be associated  with a route table,which controls the routing for the subnet.
+
 With vpc we can control all our subnets
+=======================================
 We can create e2-istances in the vpc
 we can have subnets
 We can have private subnetrs and public subnets
