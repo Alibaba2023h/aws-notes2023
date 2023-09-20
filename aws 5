@@ -6,6 +6,12 @@ or physical datacenters required.
 You can define your own network space, and control how your network and the Amazon 
 EC2 resources inside your network are exposed to the Internet
 
+What are SUBNETS IN AWS?
+========================
+A subnet is a range of IP addresses in your VPC. You launch AWS resources, 
+such as Amazon EC2 instances, into your subnets. You can connect a subnet to the internet, other VPCs,
+and your own data centers, and route traffic to and from your subnets using route tables.
+
 VPC (Vrtual Private Cloud)
 -Vpc is a private sub-section of AWS that you control,in which place AWS resources.
 -You have full control over who has access to the AWS resources you place inside our VPC
@@ -13,8 +19,17 @@ VPC (Vrtual Private Cloud)
 -In the VPC we can control our vitual networking environment,IP address,creation of subnets,route tables & gateways
 -When we create an AWS account a default VPC is created for you.
 
+With vpc we can control all our subnets
+We can create e2-istances in the vpc
+we can have subnets
+We can have private subnetrs and public subnets
+With a vpc we can launch and ec2-istance 
+Inside VPC we have private subnet and public subnets
+Your s3 should be inside the VPC AND NOT THE SUBNET
+
 
 WHATS IN THE VPC TOOL BOX?
+==============================
 
 VPC-User-defined address space up to /16 (65.536)
 Subnets -200 User-defined  up to /16
@@ -90,4 +105,11 @@ Load Balancers/webservers:
     ssh simon@3.138.178.87    
     http://3.138.178.87:80
 
-
+CREATE VPC FOR TESLA
+=====================
+Click on Create on VPC
+VPC and more
+CHoose region
+IPv4 CIDR block
+Tenancy
+Ipv6 CIDR block
