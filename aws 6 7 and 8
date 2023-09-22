@@ -84,6 +84,9 @@ so a listener is needed as well on http and https
 
 SO to route traffic what we use is a elastic load balancer
 
+HOW TO CREATE ELASTIC-LOADBALANCER?
+======================================
+
 
 Load Balancers/webservers:
   nginx  
