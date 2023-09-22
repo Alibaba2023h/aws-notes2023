@@ -71,6 +71,13 @@ Target
 -Target groups can exit independently from the load balancer
 
 
+Health checks
+===============
+Health checks allow for traffic to be shifted away from failed instances.
+support for HTTP AND HEEPS HEALTH checks.
+Customize the frequency and failure thresholds.
+Consider the depth and accuracy of your health checks.
+Details of health check failures are now returned via the API nad Management Console
 
 
 so a listener is needed as well on http and https
