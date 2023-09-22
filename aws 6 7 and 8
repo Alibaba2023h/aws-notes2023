@@ -1,0 +1,23 @@
+CI-CD PIPELINE AND LOADBALANCER
+===============================
+When a developer push code to github,Devops engineers will pull the code on jenkins,
+Next they will build the code using Maven.Packages will be built the ear/jar/ear
+After packages are built with perform code quality analysis using SonarQube
+After this stages is perform,We will deploy the artifact to nexus.Nexus is our artifactory repository
+where by we store war,jar,ear packages.
+After this 
+We use Ansible for the application deployment
+And we use tomcat as the app server 
+
+So take NOTE Ansible is part of our pipeline
+
+SO now there is a problem How will the 30 MILLION USERS ACCESS THE APPLICATION?
+
+Take note we can't allow users to access the application directly on our web-server
+
+So for that 30 USERS we need a LOADBALANCER that will route traffic between the 30users and App-server
+So now take and example,what makes jenkins a jekins server because jenkins software has been install right
+.What makes maven a maven server,because maven has been install right.
+So what makes LOADBALANCER A loadbalancer server? its when nginx  or Apache has been installed in the Loadbalancer
+
+if you allow users to access the application directly that will be vulnerable.
