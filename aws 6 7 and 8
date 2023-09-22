@@ -21,3 +21,101 @@ So now take and example,what makes jenkins a jekins server because jenkins softw
 So what makes LOADBALANCER A loadbalancer server? its when nginx  or Apache has been installed in the Loadbalancer
 
 if you allow users to access the application directly that will be vulnerable.
+So that web server will be routing traffic to the application server.Apart from routing traffic it will be be receiving  traffic from users.
+for example you have 3 app server so the loadbalancer will recieve traffic from the 30 million server and distribute the traffic.
+E.g 10million users on one appserver and the other 10 million on the other app server.
+So on that load balancer we will attach http protocol 80
+and https protocol port 443
+
+so a listener is needed as well on http and https
+
+SO to route traffic what we use is a elastic load balancer
+
+
+Load Balancers/webservers:
+  nginx  
+  haProxy 
+  http
+  users ----> ELB/LB ---->appServers
+
+    ssh simon@3.138.178.87    
+    http://3.138.178.87:80
+
+  Layer4/Network  ---> source  Destination
+
+  User1  -----> appServer   = 100ms  
+  User2  -----> appServer   = 5ms  
+
+
+Explain your experience in layer support   
+
+   ping ip  
+
+
+#!/bin/bash
+sudo yum install java-1.8.0-openjdk-devel -y
+cd /opt 
+sudo yum install git wget -y
+sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz
+sudo tar -xvf apache-tomcat-9.0.78.tar.gz
+sudo rm apache-tomcat-9.0.78.tar.gz
+sudo mv apache-tomcat-9.0.78 tomcat9
+sudo chmod 777 -R tomcat9
+sudo sh /opt/tomcat9/bin/startup.sh
+
+
+
+  curl   35.89.191.101:8080 
+  telnet 35.89.191.101 8080
+  curl   35.89.191.101:8080/tesla  
+  curl   35.89.191.101:8080/dominion  
+  curl   35.89.191.101:8080/maven-web-app      
+
+
+35.89.191.101
+34.219.198.54
+
+scp -i c32.pem target/tesla.war ec2-user@35.89.191.101:/opt/tomcat9/webapps/web.war  
+scp -i c32.pem target/tesla.war ec2-user@34.219.198.54:/opt/tomcat9/webapps/web.war  
+
+
+https://github.com/LandmakTechnology/maven-web-application   
+git clone https://github.com/LandmakTechnology/maven-web-application  
+
+scp -i /tmp/c32.pem target/tesla.war ec2-user@35.89.191.101:/opt/tomcat9/webapps/web.war  
+scp -i /tmp/c32.pem target/tesla.war ec2-user@34.219.198.54:/opt/tomcat9/webapps/web.war  
+
+curl 35.89.191.101:8080/web   
+curl 34.219.198.54:8080/web 
+
+  myNLB-ac8b77ece889263f.elb.us-west-2.amazonaws.com  
+  myNLB-ac8b77ece889263f.elb.us-west-2.amazonaws.com/web  
+
+  USERS  ----<  
+
+
+Install Docker on AWS Ubuntu servers
+############################
+#!/bin/bash
+# ubuntu 18.04
+sudo apt update -y
+sudo apt install docker.io -y
+sudo usermod -aG docker ubuntu
+sudo docker network create -d bridge mynw
+sudo docker run -d -p 8000:8080 --name springapp -e MONGO_DB_HOSTNAME=mongo -e MONGO_DB_USERNAME=devdb -e MONGO_DB_PASSWORD=devdb1234 --network mynw  mylandmarktech/spring-boot-mongo 
+sudo docker run -d --name mongo -e MONGO_INITDB_ROOT_USERNAME=devdb -e MONGO_INITDB_ROOT_PASSWORD=devdb1234  --network mynw mongo
+
+ 34.219.160.189:8000
+
+
+webs.mylandmarktech.net   --- webAppTG  []
+spring.mylandmarktech.net ---SpringApp 
+myALB-368167879.us-west-2.elb.amazonaws.com
+
+
+
+
+
+
+
+
