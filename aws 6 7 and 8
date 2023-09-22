@@ -27,6 +27,52 @@ E.g 10million users on one appserver and the other 10 million on the other app s
 So on that load balancer we will attach http protocol 80
 and https protocol port 443
 
+We have Two types of Loadbalancer
+=====================================
+NETWORK-LOADBALANCER AND APPLICATION LOAD BALANCER
+operates at the connection level(Layer4),routing connections to targets-EC2 instances,
+microservices,and containers- within VPC based on IP protocol data.
+Supports TCP/UDP Protocols.Protocol(Layer4).
+Is capable of handling millions of requests per second while maintaining ultra-low
+latencies
+Is optimized to handle sudden and volatile traffic patterns.
+
+APPLICATION LOAD BALANCER
+==================================
+-Supports HTTP/HTTPS Protocols.
+-Operates at the request 
+level (layer7) routing traffic to targets -EC2 instances,containers,IP addresses,
+and Lambda functions based on the content of the request
+-Routes based on the content of the request.
+-Supports Host-based Routing & Path-based Routing
+-Is ideal for advanced load balancing of HTTP and HTTPS traffic and provides 
+advanced request routing targeted at delivery of mordern application architectures,
+including micro services and container-based applications.
+
+
+
+
+
+Listener
+=========
+Define the port and protocol which the load balancer must listen on.
+Each Application Load Balancer needs at least one listener to accept traffic.
+Each application Load Balancer can have up to 50 listeners
+Routing rules are defined on listeners
+
+so LOADBALANCER----->LISTENER------->TARGET GROUP
+loadbalancer needs listeners and listeners needs Target group.
+Target
+=========
+-Support for ec2 instances and ECS containers,And IP Addresses.
+-EC2 instance can be registered with the same target group using multiple ports
+-A single target can be registered with multiple target groups
+-Logical grouping of targets behind the load balancer.
+-Target groups can exit independently from the load balancer
+
+
+
+
 so a listener is needed as well on http and https
 
 SO to route traffic what we use is a elastic load balancer
