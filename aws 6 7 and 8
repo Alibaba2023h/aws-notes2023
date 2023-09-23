@@ -89,6 +89,11 @@ HOW TO CREATE ELASTIC-LOADBALANCER?
 Create a VPC first
 Create An instance 
 we will install tomcat in the instance create.
+
+set up 2 instance for the purpose of these studies
+
+We will use the above script below to install tomcat when setting up our tomcat instance
+
 #!/bin/bash
 sudo yum install java-1.8.0-openjdk-devel -y
 cd /opt 
@@ -99,6 +104,42 @@ sudo rm apache-tomcat-9.0.80.zip
 sudo mv apache-tomcat-9.0.80 tomcat9
 sudo chmod 777 -R tomcat9
 sudo sh /opt/tomcat9/bin/startup.sh
+
+
+once the servers a created we will use scp -i keyname target/tesla.war ec2-user@35.89.191.101:/opt/tomcat9/webapps/web.war
+
+35.89.191.101
+34.219.198.54
+
+scp -i c32.pem target/tesla.war ec2-user@35.89.191.101:/opt/tomcat9/webapps/web.war  
+scp -i c32.pem target/tesla.war ec2-user@34.219.198.54:/opt/tomcat9/webapps/web.war  
+
+
+
+CREATING A LOADBALANCER
+========================
+Click on loadbalancers
+click on create
+create network loadbalancer
+choose a Name
+E.g myNLB
+Under networking choose the vpc you want to use
+For mapping you can use all the availability  Zones
+Choose  a Listener for your loadbalancer
+TCP:80
+next create a Target Group
+since its a network loadbalancer while creating it choose port 80
+
+Now choose port 8080 the port where your tomcats listens on
+
+
+now create your loadbalancer
+
+
+
+
+
+
 
 
 
@@ -119,19 +160,6 @@ Load Balancers/webservers:
 
 Explain your experience in layer support   
 
-   ping ip  
-
-
-#!/bin/bash
-sudo yum install java-1.8.0-openjdk-devel -y
-cd /opt 
-sudo yum install git wget -y
-sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz
-sudo tar -xvf apache-tomcat-9.0.78.tar.gz
-sudo rm apache-tomcat-9.0.78.tar.gz
-sudo mv apache-tomcat-9.0.78 tomcat9
-sudo chmod 777 -R tomcat9
-sudo sh /opt/tomcat9/bin/startup.sh
 
 
 
@@ -140,20 +168,6 @@ sudo sh /opt/tomcat9/bin/startup.sh
   curl   35.89.191.101:8080/tesla  
   curl   35.89.191.101:8080/dominion  
   curl   35.89.191.101:8080/maven-web-app      
-
-
-35.89.191.101
-34.219.198.54
-
-scp -i c32.pem target/tesla.war ec2-user@35.89.191.101:/opt/tomcat9/webapps/web.war  
-scp -i c32.pem target/tesla.war ec2-user@34.219.198.54:/opt/tomcat9/webapps/web.war  
-
-
-https://github.com/LandmakTechnology/maven-web-application   
-git clone https://github.com/LandmakTechnology/maven-web-application  
-
-scp -i /tmp/c32.pem target/tesla.war ec2-user@35.89.191.101:/opt/tomcat9/webapps/web.war  
-scp -i /tmp/c32.pem target/tesla.war ec2-user@34.219.198.54:/opt/tomcat9/webapps/web.war  
 
 curl 35.89.191.101:8080/web   
 curl 34.219.198.54:8080/web 
