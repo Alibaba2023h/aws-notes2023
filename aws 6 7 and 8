@@ -86,6 +86,20 @@ SO to route traffic what we use is a elastic load balancer
 
 HOW TO CREATE ELASTIC-LOADBALANCER?
 ======================================
+Create a VPC first
+Create An instance 
+we will install tomcat in the instance create.
+#!/bin/bash
+sudo yum install java-1.8.0-openjdk-devel -y
+cd /opt 
+sudo yum install git wget -y
+sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.80/bin/apache-tomcat-9.0.80.zip
+sudo unzip apache-tomcat-9.0.80.zip
+sudo rm apache-tomcat-9.0.80.zip
+sudo mv apache-tomcat-9.0.80 tomcat9
+sudo chmod 777 -R tomcat9
+sudo sh /opt/tomcat9/bin/startup.sh
+
 
 
 Load Balancers/webservers:
