@@ -15,3 +15,18 @@ What is Route 53 used for?
 Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. 
 You can use Route 53 to perform three main functions in any combination:
 domain registration, DNS routing, and health checking. Your website needs a name, such as example.com.
+
+SO you need to buy a domain first.Click on Registered Domain if you have one already.
+Now you can click on your domain name and create A-records
+We want a suitation where by users will type just our name and access our application instead of 
+typing the loadbalancer URL.
+
+
+STEP BY STEP ON HOW TO CREATE A RECORD SET
+============================================
+Choose the record name a sub-domain.
+Click Alias
+choose Alias to network Loadbalancer id thats what your using
+Choose your region and select the load balancer
+Click on create Record
+Now your able to see your record .
