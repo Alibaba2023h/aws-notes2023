@@ -123,18 +123,22 @@ click on create
 create network loadbalancer
 choose a Name
 E.g myNLB
+Scheme:Choose internet-facing
+IPV4
 Under networking choose the vpc you want to use
 For mapping you can use all the availability  Zones
 Choose  a Listener for your loadbalancer
 TCP:80
 next create a Target Group
+Select the name and select TCP
 since its a network loadbalancer while creating it choose port 80
 
 Now choose port 8080 the port where your tomcats listens on
+The load balancer takes time to initialize 
 
 
 now create your loadbalancer
-
+For you to add multiple targets on a load balancer,you need to create a loadbalancer that supports multi-Targets
 
 
 
@@ -197,7 +201,7 @@ spring.mylandmarktech.net ---SpringApp
 myALB-368167879.us-west-2.elb.amazonaws.com
 
 
-
+HOW TO CREATE A-RECORD
 
 
 
