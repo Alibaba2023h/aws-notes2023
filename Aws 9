@@ -1,0 +1,17 @@
+  Remember we have two catergories for load balancer.
+Network load-balancer and application load-balancer
+Network load-balancer is layer7 and application-loadbalancer Layer7
+
+For our customers to access the Application with need to create Hosted zones using A-record
+So firstly you need to buy a domain name
+Examples of Domain names/Lavet.com Benjamincompany.com
+
+So AWS Has a DNA service called route 53 used to route traffic.
+SO WHAT IS ROUTE53?
+======================
+Amazon Route 53 is a highly available and scalable cloud domain name system (DNS) service.
+Enables to customize DNS routing policies to reduce latency.
+What is Route 53 used for?
+Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. 
+You can use Route 53 to perform three main functions in any combination:
+domain registration, DNS routing, and health checking. Your website needs a name, such as example.com.
