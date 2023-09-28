@@ -1,0 +1,4 @@
+IAM
+===========
+This is a key security service in aws used for authentication and  authorization for engineers to perform various task.
+You can create a new user and give them access on what the can do and perform.
