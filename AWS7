@@ -17,15 +17,6 @@ we use the principle of least priviledges
 
 Which tasks is a user with admin access unable to do? Billing  
 
-Users can have either:
-  console access [userName and password and accountID]  or 
-  programatic access using [accessKey and secretAccessKey]
-  to aws resources    
-
-programatic access is needed to manage aws resources using:
-  commands-cli, IaC-Terraform   
-accessKey      =   AKIAUGAKLPXT4VBEQZK5
-secretAccessKey=   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
 
 aws configure 
    accessKey
@@ -48,6 +39,27 @@ HOW TO ASSIGN PERMISSION TO IAM USER
 ====================================
 IAM POLICIES ARE PERMISSIONS THAT CAN BE ASSIGNED TO USERS/GROUPS/IAM-ROLES
 If your user dont have any permission the wont be able to peform any task on the aws account.
+
+
+Users can have either:
+  console access [userName and password and accountID]  or 
+  programatic access using [accessKey and secretAccessKey]
+  to aws resources    
+
+programatic access is needed to manage aws resources using:
+  commands-cli, IaC-Terraform   
+accessKey      =   AKIAUGAKLPXT4VBEQZK5
+secretAccessKey=   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
+
+PROGRAMATIC ACCESS
+===================
+With programatic access it is needed to managed aws services such as infrastructure as a code.
+An example is Terraform
+example:Run aws configure on your cli (SSH CLIENT)
+
+IAM ROLES CAN BE ATTACHED TO OTHER AWS RESOURCES LIKE EC2 INSTANCE,EKS,ECS
+
+
 
 
 
