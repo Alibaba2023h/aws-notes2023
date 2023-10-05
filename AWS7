@@ -2,3 +2,53 @@ IAM
 ===========
 This is a key security service in aws used for authentication and  authorization for engineers to perform various task.
 You can create a new user and give them access on what the can do and perform.
+
+IAM Policies - are Permissions that can be assigned to users/groups/IAM-Roles
+
+  class31
+     [EC2ReadOnlyAccess,S3FULLACCESS]  
+
+Ticket00147-- Allow class31-IAM-user to view EC2 instances
+  AdministorAccess  -- 
+  EC2FullAccess     -- 
+  EC2ReadOnlyAccess -- 
+Security is inherent in our environment 
+we use the principle of least priviledges 
+
+Which tasks is a user with admin access unable to do? Billing  
+
+Users can have either:
+  console access [userName and password and accountID]  or 
+  programatic access using [accessKey and secretAccessKey]
+  to aws resources    
+
+programatic access is needed to manage aws resources using:
+  commands-cli, IaC-Terraform   
+accessKey      =   AKIAUGAKLPXT4VBEQZK5
+secretAccessKey=   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
+
+aws configure 
+   accessKey
+   secretAccessKey
+   defaultRegion  
+   output format [table, json]  
+
+$ aws s3 ls
+
+An error occurred (AccessDenied) 
+when calling the ListBuckets operation: Access Denied
+
+HOW TO CREATE I AM USER
+========================
+Select IAM on AWS
+Choose name
+and choose a password
+
+HOW TO ASSIGN PERMISSION TO IAM USER
+====================================
+IAM POLICIES ARE PERMISSIONS THAT CAN BE ASSIGNED TO USERS/GROUPS/IAM-ROLES
+If your user dont have any permission the wont be able to peform any task on the aws account.
+
+
+
+
